@@ -1,0 +1,19 @@
+{
+ "head": 460465158,
+ "program_accounts": 78518,
+ "distinct_pointers": 78518,
+ "programdata_accounts": 23253,
+ "pointer_resolves_to_live_pd": 23253,
+ "coverage_pct": 29.61,
+ "zombies_pointer_to_absent_pd": 55265,
+ "zombie_pct": 70.39,
+ "orphan_pd_no_program_points_here": 0,
+ "zombie_examples": [
+  "EqctypK3z9tWYfbRr63SJDkoY5yPs2QodeMvLiM2FjjA",
+  "69rY7p7t8UwDfGjXu59iK6SUYXmgAUJWWUvyN3vMLdMB",
+  "7AxAc9nQNxAPhusSwdDfmYwhV2trGNoc3xWjWQyE2R8r",
+  "7Pf9Bu6XrgQDCsqwMBE9pCQnVtr5LfcykUTZh3zysoLV",
+  "GtMpweTYZt2yfXP9jLeaKunu4F4WTBav3rAWnbLj8gem"
+ ],
+ "orphan_examples": []
+}

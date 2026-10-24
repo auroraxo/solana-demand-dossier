@@ -1,0 +1,92 @@
+{
+  "at": "2026-10-23T14:15:31.278Z",
+  "finalizedSlot": 460472901,
+  "calls": 12,
+  "H1": {
+    "rows": 105262,
+    "distinct": 105262,
+    "stateHistogram": {
+      "1": 3471,
+      "2": 78523,
+      "3": 23257,
+      "<4bytes": 11
+    },
+    "sub4Bytes": [
+      {
+        "pubkey": "arigeuotq4pACpmf6KXDRU8kD621upG76vAYcnBv2F9",
+        "space": 0
+      },
+      {
+        "pubkey": "4v5c5sCHmSspeBL1cdL9PUaT7PYZDvUMbFnjoogT9fhn",
+        "space": 0
+      },
+      {
+        "pubkey": "5dstw7smG6JNav2nsnoiFgTgGiupt1MghLMkYrgGQGb5",
+        "space": 0
+      },
+      {
+        "pubkey": "77UFFeutvLiksjdp6ih4xa4Vs7GfQUnFccoxQcuAytrv",
+        "space": 0
+      },
+      {
+        "pubkey": "8aqnwYp9L8ze4n1kem3Ed8ghN9tU7CXHbqbF8EjrRZF4",
+        "space": 0
+      },
+      {
+        "pubkey": "ArjJE74skkQy2T66YraihNY8xXh9PJgbhgLNVZ5ZDpS3",
+        "space": 0
+      },
+      {
+        "pubkey": "CooLUUdVF69ifhR2THpfeFD7Mm5PiUtz56CbwZ5A8ASD",
+        "space": 0
+      },
+      {
+        "pubkey": "DatasYM1oc3uMvbRP6ezfkY59WmJWVKFxVMCvBjyoTD7",
+        "space": 0
+      },
+      {
+        "pubkey": "DiGV6ALPwRVSuBph984K92LT2Vzu7QZkZ1Ew3S7fVvGL",
+        "space": 0
+      },
+      {
+        "pubkey": "FC3nyVqdufVfrgXiRJEqgST1JdJSEBEz6a9KoBfFP7c4",
+        "space": 0
+      },
+      {
+        "pubkey": "Gadf1ymGoriTFYvS7fEb6AGb3dxqJPURgGiw3B9gw62n",
+        "space": 0
+      }
+    ],
+    "sub4Count": 11
+  },
+  "H2": {
+    "perTag": {
+      "0": 0,
+      "1": 3471,
+      "2": 78523,
+      "3": 23257
+    },
+    "sum": 105251,
+    "setSizes": {
+      "1": 3471,
+      "2": 78523,
+      "3": 23257
+    }
+  },
+  "H1_byH2_membership": {
+    "rawDistinct": 105262,
+    "tagUnion": 105251,
+    "missingFromTags": 11,
+    "extraInTags": 0
+  },
+  "H3": {
+    "elfAt45": 23257
+  },
+  "H4": {
+    "sample": 400,
+    "lengthHistogram": {
+      "36": 400
+    }
+  },
+  "errors": []
+}

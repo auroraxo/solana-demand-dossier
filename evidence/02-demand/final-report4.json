@@ -1,0 +1,79 @@
+{
+ "generated_at": "2026-10-24T16:20:05.161Z",
+ "beat": "15:34Z / cron-81769db1",
+ "methodology": "two independent stride samples of the 13:00Z matched pairs (overlap measured 0), mainnet-beta only, patient retries, resume-safe, 0 fatal rows in both",
+ "superseded": "final-report.json (13:25Z): mixed leorpc pool, 75.28% zombie of decided — void (leorpc empty-signature defect measured in this attempt)",
+ "population_fresh": {
+  "measured_at_head": 460909836,
+  "population_n": 23254,
+  "C1_C3_all_pass": true
+ },
+ "pass1_verify3": {
+  "label": "verify3",
+  "path": "/tmp/demand1234/verify3-rows.jsonl",
+  "counts": {
+   "active_top_level_success": 156,
+   "no_success_after_deploy": 22,
+   "silent_since_deploy": 3,
+   "history_unavailable": 6,
+   "active_cpi_success": 9,
+   "active_touch_success": 4
+  },
+  "alive": 169,
+  "dead": 25,
+  "undecided": 6,
+  "decided": 194,
+  "dead_share": 0.1289,
+  "dead_ci95": {
+   "lo": 0.0888,
+   "hi": 0.1833
+  }
+ },
+ "pass2_replicate": {
+  "label": "replicate",
+  "path": "/tmp/demand1234/replicate-rows.jsonl",
+  "counts": {
+   "no_success_after_deploy": 22,
+   "active_top_level_success": 162,
+   "no_success_all_probed": 7,
+   "silent_since_deploy": 2,
+   "no_success_spread_probed": 6,
+   "history_unavailable": 1
+  },
+  "alive": 175,
+  "dead": 24,
+  "undecided": 1,
+  "decided": 199,
+  "dead_share": 0.1206,
+  "dead_ci95": {
+   "lo": 0.0824,
+   "hi": 0.1732
+  }
+ },
+ "cross_pass": {
+  "dead_share_difference": 0.0083,
+  "ci95_overlap": true,
+  "consistent": true
+ },
+ "pooled": {
+  "dead": 49,
+  "decided": 393,
+  "dead_share": 0.1247,
+  "dead_ci95": {
+   "lo": 0.0956,
+   "hi": 0.161
+  },
+  "alive_share": 0.8753,
+  "alive_ci95": {
+   "lo": 0.839,
+   "hi": 0.9044
+  }
+ },
+ "strict_top_level_pass1": {
+  "proven_top_level_active": 156,
+  "proven_no_successful_execution": 25,
+  "alive_toplevel_unconfirmed": 13,
+  "undecided": 6
+ },
+ "interpretation": "IDL-Drift/Provenienz is a topic of ACTIVE programs: ~87-88% of live-PD programs executed successfully after their last deploy; ~12% proven silent/all-failed. CI95 Wilson over both passes."
+}

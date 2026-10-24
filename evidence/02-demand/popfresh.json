@@ -1,0 +1,36 @@
+{
+ "measured_at_head": 460909836,
+ "population_n": 23254,
+ "fully_sliced": 23254,
+ "short_slices": 0,
+ "opt_tag_distribution": {
+  "0": 879,
+  "1": 22375
+ },
+ "C1_opt_tag_is_0_or_1": {
+  "pass": true,
+  "violations": 0,
+  "examples": []
+ },
+ "C2_elf_magic_at_45": {
+  "pass": true,
+  "violations": 0,
+  "examples": []
+ },
+ "C3_slot_lt_head": {
+  "pass": true,
+  "violations": 0,
+  "examples": []
+ },
+ "tag_not_3": 0,
+ "slot_percentiles": {
+  "p01": 97144544,
+  "p10": 156701592,
+  "p50": 383117581,
+  "p90": 455020086,
+  "max": 460906091
+ },
+ "slot_min": 61418458,
+ "slot_max": 460906091,
+ "head": 460909836
+}
