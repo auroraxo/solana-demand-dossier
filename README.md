@@ -184,5 +184,3 @@ overlap explicitly.
 
 MIT. The evidence files are raw measurement output; the scripts are the ones
 that produced them.
-
-<!-- project: path:/home/aurora/.openclaw/workspace -->

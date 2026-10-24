@@ -13,12 +13,13 @@ a public page without a file behind it, in the same session that published it.
 
 Scripts: `scripts/exact-coverage.mjs`, `scripts/pop-tag.mjs` (sweep), `scripts/join-fix.mjs` (pointer JOIN).
 
-Provenance: first measured 2026-10-23 13:19Z (head 460,459,649, n=23,253),
-JOIN re-derivation 14:37Z (this file, slot epoch 14:37Z, 825 RPC calls),
-time-revalidated 16:18Z at 29.62 %. The workspace beat log (solana-replay-fixture-probe
-FINDINGS.md, sections 13:19Z and 14:0x–14:5xZ) records each run including the
-parser-guard artifact that first faked 5 orphan PDs and was caught and fixed
-before the number was published.
+Provenance: first measured 2026-10-23 13:19 UTC (head slot 460,459,649,
+n=23,253), independent JOIN re-derivation the same day at 14:37 UTC
+(`join-fixed.json`, 825 RPC calls), time-revalidated at 16:18 UTC at 29.62 %.
+The intermediate run first reported 5 apparent orphan PDs; that turned out to
+be a parser guard bug in `join-fix.mjs`'s predecessor (36-byte hard guard
+excluding 5 oversized program accounts), caught and corrected before the
+number was published — the corrected file is the one you see here.
 
 ## 02-demand — Finding 2 (87.53 % alive / 12.47 % dead)
 
@@ -35,9 +36,10 @@ Method: each row = one live ProgramData account; read the account header
 (last-deploy slot at bytes [4:12]), then walk the program's signature history
 and classify what happened **after** that slot (successful top-level execution
 / all-failed / silent / history unavailable). Mainnet-beta RPC only. One
-earlier report from the same day (75 % "zombie") was voided: its pool mixed in
-a node that returns empty signature lists for real accounts. The voided report
-is deliberately not included.
+earlier report the same day (~13:25 UTC, "75 % zombie") was voided: its pool
+mixed in a third-party RPC that returns empty signature lists for accounts the
+mainnet node answers — its silent classes were node artifacts, not chain facts.
+The voided report is deliberately not included.
 
 ## 03-adoption — Finding 3
 
@@ -61,14 +63,17 @@ is deliberately not included.
 
 ## Integrity notes
 
-- All files copied into this repo in the publication beat (2026-10-24 ~23:50Z)
-  from the measurement directories (`/tmp/prov1234`, `/tmp/pop1408`,
-  `/tmp/demand1234`). The four `02-demand/` files were additionally md5-matched
-  against the workspace copies attached to the internal workboard proof earlier
-  the same day (`demand-15-34Z-*`) — byte-identical.
+- All files copied into this repo in the publication beat (2026-10-24 ~23:50 UTC)
+  from the measurement directories that produced them. The four `02-demand/`
+  files were md5-matched against the copies recorded as proof of the
+  15:34 UTC measurement beat — byte-identical
+  (`final-report4.json` 6dceeae0…, `pass1-verify3-rows.jsonl` 58c62358…,
+  `pass2-replicate-rows.jsonl` eed187b2…, `popfresh.json` 2fa9072e…).
 - Scripts were scanned before publishing: no API keys, no tokens, no
-  authenticated endpoints. One script contains a comment naming a provider
-  whose empty-response defect voided an earlier report; no credentials anywhere.
+  authenticated endpoints; every published script talks only to
+  `https://api.mainnet-beta.solana.com` (verified by grep of all `https://`
+  URLs in `scripts/`). Some comment lines name a third-party provider whose
+  empty-response defect voided an earlier report; no credentials anywhere.
 - The GitHub API captures are response bodies as returned on 2026-10-24; live
   state may have moved since (each table cell in the README links the live
   source so you can re-check).
