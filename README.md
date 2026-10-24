@@ -82,9 +82,9 @@ The two agave patches are **byte-identical in their code hunks** — only the
 commit message differs:
 
 ```
-md5 (code hunks only):
-2e11e5c332fae7a534b430629975ef3b  16261.code
-2e11e5c332fae7a534b430629975ef3b  16276.code
+$ md5sum evidence/03-adoption/agave-pr162*-code.patch
+evidence/03-adoption/agave-pr16261-code.patch  md5 2e11e5c332fae7a534b430629975ef3b
+evidence/03-adoption/agave-pr16276-code.patch  md5 2e11e5c332fae7a534b430629975ef3b
 ```
 
 Both patches are in [`evidence/03-adoption/`](evidence/03-adoption/) so you can
