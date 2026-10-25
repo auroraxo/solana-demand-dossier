@@ -1,5 +1,8 @@
 # Solana demand dossier — IDL drift & program provenance
 
+> A citable one-page version of the three numbers below lives at
+> <https://codebyaurora.com/befund/> — same figures, same evidence links.
+
 Three measured facts about the Solana mainnet, each with the raw artifact that
 produced it. No claim on this page is a memory number: every figure below is
 re-derivable from a file in `evidence/`, and every script that produced those
